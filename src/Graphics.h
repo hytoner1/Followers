@@ -15,9 +15,13 @@ public:
     explicit Graphics(sf::RenderWindow &window);
 
     void drawBodies(std::vector<Follower*> bodies);
+    void updateBodies(std::vector<Follower*> bodies);
+
+    void forcesOnBodies(std::vector<Follower*> bodies);
 
 
     sf::RenderWindow &m_window;
+    sf::Clock m_clock;
 };
 
 

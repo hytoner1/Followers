@@ -11,12 +11,16 @@ iostream
 -
 SFML/Graphics.hpp
 -
+math.h
+-
 src/follower.h
 /home/roni/Dropbox/Cpp/Followers/src/follower.h
 src/Graphics.h
 /home/roni/Dropbox/Cpp/Followers/src/Graphics.h
 
 /home/roni/Dropbox/Cpp/Followers/src/Graphics.cpp
+iostream
+-
 Graphics.h
 /home/roni/Dropbox/Cpp/Followers/src/Graphics.h
 
@@ -27,6 +31,8 @@ follower.h
 /home/roni/Dropbox/Cpp/Followers/src/follower.h
 
 /home/roni/Dropbox/Cpp/Followers/src/follower.cpp
+iostream
+-
 follower.h
 /home/roni/Dropbox/Cpp/Followers/src/follower.h
 

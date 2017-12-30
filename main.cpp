@@ -7,18 +7,17 @@
 
 
 int main() {
-    std::cout << "a!" << std::endl;
 
     std::vector<Follower*> a2;
-    a2.push_back(new Follower(sf::Vector2f(1,1), sf::Vector2f(1,1)));
+    a2.push_back(new Follower(sf::Vector2f(1,1), sf::Vector2f(20,60)));
+    a2.push_back(new Follower(sf::Vector2f(150,1), sf::Vector2f(20,-60)));
+    a2.push_back(new Follower(sf::Vector2f(300,1), sf::Vector2f(40,40)));
+    a2.push_back(new Follower(sf::Vector2f(500,1), sf::Vector2f(-20,60)));
 
-
-    std::cout << a2[0]->pos().x << " " << a2[0]->pos().y << std::endl;
-
-
-
-    std::cout << "b!" << std::endl;
-
+    a2.push_back(new Follower(sf::Vector2f(100,100), sf::Vector2f(20,60)));
+    a2.push_back(new Follower(sf::Vector2f(50,500), sf::Vector2f(20,-60)));
+    a2.push_back(new Follower(sf::Vector2f(30,300), sf::Vector2f(40,40)));
+    a2.push_back(new Follower(sf::Vector2f(200,20), sf::Vector2f(-20,60)));
 
 
     sf::RenderWindow window(sf::VideoMode(800, 600), "Followers");
@@ -27,14 +26,12 @@ int main() {
     graphics.m_window.setKeyRepeatEnabled(false);
     graphics.m_window.setFramerateLimit(30);
 
-    sf::Clock clock;
-    sf::Time t = sf::seconds(0);
-
     while (window.isOpen()) {
         graphics.m_window.clear();
 
         graphics.drawBodies(a2);
-        a2[0]->updatePos(t);
+        graphics.updateBodies(a2);
+        graphics.forcesOnBodies(a2);
 
         sf::Event event;
 
@@ -48,7 +45,6 @@ int main() {
             }
         }
         graphics.m_window.display();
-        t = clock.restart();
     }
 
 
