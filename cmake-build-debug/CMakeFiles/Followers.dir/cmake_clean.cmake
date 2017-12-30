@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Followers.dir/main.cpp.o"
   "CMakeFiles/Followers.dir/src/follower.cpp.o"
+  "CMakeFiles/Followers.dir/src/Graphics.cpp.o"
   "Followers.pdb"
   "Followers"
 )

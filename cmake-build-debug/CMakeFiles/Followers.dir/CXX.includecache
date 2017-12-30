@@ -13,6 +13,18 @@ SFML/Graphics.hpp
 -
 src/follower.h
 /home/roni/Dropbox/Cpp/Followers/src/follower.h
+src/Graphics.h
+/home/roni/Dropbox/Cpp/Followers/src/Graphics.h
+
+/home/roni/Dropbox/Cpp/Followers/src/Graphics.cpp
+Graphics.h
+/home/roni/Dropbox/Cpp/Followers/src/Graphics.h
+
+/home/roni/Dropbox/Cpp/Followers/src/Graphics.h
+SFML/Graphics.hpp
+-
+follower.h
+/home/roni/Dropbox/Cpp/Followers/src/follower.h
 
 /home/roni/Dropbox/Cpp/Followers/src/follower.cpp
 follower.h
@@ -20,5 +32,7 @@ follower.h
 
 /home/roni/Dropbox/Cpp/Followers/src/follower.h
 SFML/System.hpp
+-
+SFML/Graphics/CircleShape.hpp
 -
 

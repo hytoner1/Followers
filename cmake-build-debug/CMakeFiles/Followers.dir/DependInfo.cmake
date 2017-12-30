@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/roni/Dropbox/Cpp/Followers/main.cpp" "/home/roni/Dropbox/Cpp/Followers/cmake-build-debug/CMakeFiles/Followers.dir/main.cpp.o"
+  "/home/roni/Dropbox/Cpp/Followers/src/Graphics.cpp" "/home/roni/Dropbox/Cpp/Followers/cmake-build-debug/CMakeFiles/Followers.dir/src/Graphics.cpp.o"
   "/home/roni/Dropbox/Cpp/Followers/src/follower.cpp" "/home/roni/Dropbox/Cpp/Followers/cmake-build-debug/CMakeFiles/Followers.dir/src/follower.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/Followers.dir/main.cpp.o CMakeFiles/Followers.dir/src/follower.cpp.o  -o Followers 
+/usr/bin/c++  -g   CMakeFiles/Followers.dir/main.cpp.o CMakeFiles/Followers.dir/src/follower.cpp.o CMakeFiles/Followers.dir/src/Graphics.cpp.o  -o Followers -lsfml-graphics -lsfml-window -lsfml-system 

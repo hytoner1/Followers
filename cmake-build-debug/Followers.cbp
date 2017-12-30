@@ -87,6 +87,12 @@
 		<Unit filename="/home/roni/Dropbox/Cpp/Followers/main.cpp">
 			<Option target="Followers"/>
 		</Unit>
+		<Unit filename="/home/roni/Dropbox/Cpp/Followers/src/Graphics.cpp">
+			<Option target="Followers"/>
+		</Unit>
+		<Unit filename="/home/roni/Dropbox/Cpp/Followers/src/Graphics.h">
+			<Option target="Followers"/>
+		</Unit>
 		<Unit filename="/home/roni/Dropbox/Cpp/Followers/src/follower.cpp">
 			<Option target="Followers"/>
 		</Unit>

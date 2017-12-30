@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Followers.dir/build.make CMakeFiles/Followers.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/Graphics.o: src/Graphics.cpp.o
+
+.PHONY : src/Graphics.o
+
+# target to build an object file
+src/Graphics.cpp.o:
+	$(MAKE) -f CMakeFiles/Followers.dir/build.make CMakeFiles/Followers.dir/src/Graphics.cpp.o
+.PHONY : src/Graphics.cpp.o
+
+src/Graphics.i: src/Graphics.cpp.i
+
+.PHONY : src/Graphics.i
+
+# target to preprocess a source file
+src/Graphics.cpp.i:
+	$(MAKE) -f CMakeFiles/Followers.dir/build.make CMakeFiles/Followers.dir/src/Graphics.cpp.i
+.PHONY : src/Graphics.cpp.i
+
+src/Graphics.s: src/Graphics.cpp.s
+
+.PHONY : src/Graphics.s
+
+# target to generate assembly for a file
+src/Graphics.cpp.s:
+	$(MAKE) -f CMakeFiles/Followers.dir/build.make CMakeFiles/Followers.dir/src/Graphics.cpp.s
+.PHONY : src/Graphics.cpp.s
+
 src/follower.o: src/follower.cpp.o
 
 .PHONY : src/follower.o
@@ -189,6 +216,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/Graphics.o"
+	@echo "... src/Graphics.i"
+	@echo "... src/Graphics.s"
 	@echo "... src/follower.o"
 	@echo "... src/follower.i"
 	@echo "... src/follower.s"

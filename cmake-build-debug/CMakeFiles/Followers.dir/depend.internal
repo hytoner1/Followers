@@ -3,6 +3,11 @@
 
 CMakeFiles/Followers.dir/main.cpp.o
  /home/roni/Dropbox/Cpp/Followers/main.cpp
+ /home/roni/Dropbox/Cpp/Followers/src/Graphics.h
+ /home/roni/Dropbox/Cpp/Followers/src/follower.h
+CMakeFiles/Followers.dir/src/Graphics.cpp.o
+ /home/roni/Dropbox/Cpp/Followers/src/Graphics.cpp
+ /home/roni/Dropbox/Cpp/Followers/src/Graphics.h
  /home/roni/Dropbox/Cpp/Followers/src/follower.h
 CMakeFiles/Followers.dir/src/follower.cpp.o
  /home/roni/Dropbox/Cpp/Followers/src/follower.cpp

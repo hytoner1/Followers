@@ -5,8 +5,8 @@
 #include "follower.h"
 
 Follower::Follower(sf::Vector2f pos, sf::Vector2f vel) :
-    m_pos(pos), m_vel(vel)
-    {}
+    m_pos(pos), m_vel(vel) {
+    }
 
 Follower::~Follower() { }
 
@@ -28,3 +28,4 @@ void Follower::updatePos(float t){
     sf::Vector2f pos_new = pos() + vel() *  t;
     pos(pos_new);
 }
+
