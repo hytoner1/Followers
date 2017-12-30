@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/roni/Dropbox/Cpp/Followers/main.cpp
+iostream
+-
+SFML/Graphics.hpp
+-
+src/follower.h
+/home/roni/Dropbox/Cpp/Followers/src/follower.h
+
+/home/roni/Dropbox/Cpp/Followers/src/follower.cpp
+follower.h
+/home/roni/Dropbox/Cpp/Followers/src/follower.h
+
+/home/roni/Dropbox/Cpp/Followers/src/follower.h
+SFML/System.hpp
+-
+

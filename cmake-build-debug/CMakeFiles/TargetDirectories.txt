@@ -1,0 +1,3 @@
+/home/roni/Dropbox/Cpp/Followers/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/roni/Dropbox/Cpp/Followers/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/roni/Dropbox/Cpp/Followers/cmake-build-debug/CMakeFiles/Followers.dir
