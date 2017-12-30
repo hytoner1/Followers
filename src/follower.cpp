@@ -23,3 +23,8 @@ sf::Vector2f Follower::vel() const{
 void Follower::vel(sf::Vector2f vel_new){
     m_pos = vel_new;
 }
+
+void Follower::updatePos(float t){
+    sf::Vector2f pos_new = pos() + vel() *  t;
+    pos(pos_new);
+}
