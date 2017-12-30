@@ -1,18 +1,17 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include <math.h>
+
 #include "src/follower.h"
 #include "src/Graphics.h"
+
 
 int main() {
     std::cout << "a!" << std::endl;
 
-    Follower a = Follower(sf::Vector2f(1,1), sf::Vector2f(1,1));
-    std::cout << a.pos().x << " " << a.pos().y << std::endl;
-
-    a.updatePos(1.0);
-
     std::vector<Follower*> a2;
     a2.push_back(new Follower(sf::Vector2f(1,1), sf::Vector2f(1,1)));
+
 
     std::cout << a2[0]->pos().x << " " << a2[0]->pos().y << std::endl;
 
@@ -26,13 +25,16 @@ int main() {
 
     Graphics graphics = Graphics(window);
     graphics.m_window.setKeyRepeatEnabled(false);
+    graphics.m_window.setFramerateLimit(30);
 
+    sf::Clock clock;
+    sf::Time t = sf::seconds(0);
 
     while (window.isOpen()) {
         graphics.m_window.clear();
 
         graphics.drawBodies(a2);
-        a2[0]->updatePos(0.01);
+        a2[0]->updatePos(t);
 
         sf::Event event;
 
@@ -46,6 +48,7 @@ int main() {
             }
         }
         graphics.m_window.display();
+        t = clock.restart();
     }
 
 

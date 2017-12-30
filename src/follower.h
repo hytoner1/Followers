@@ -20,11 +20,17 @@ public:
     void vel(sf::Vector2f vel_new);
 
 
-    void updatePos(float t);
+    void updatePos(sf::Time t);
+
+    float LJPotentialPair(Follower *other);
+    float dist(Follower *other);
 
 protected:
     sf::Vector2f m_pos;
     sf::Vector2f m_vel;
+
+    float m_eps = 1;
+    float m_sig = 1;
 
 };
 
