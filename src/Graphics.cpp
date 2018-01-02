@@ -55,20 +55,46 @@ void Graphics::updateBodies(std::vector<Follower*> bodies){
 }
 
 
-void Graphics::forcesOnBodies(std::vector<Follower*> bodies){
-    for (int i = 0; i < bodies.size()-1; ++i) {
-        bodies[i]->acc( sf::Vector2f(0,0) );
-        sf::Vector2f tmp_F(0,0);
+void Graphics::forcesOnBodies(std::vector<Follower*> bodies) {
+    for (int i = 0; i < bodies.size() - 1; ++i) {
+        bodies[i]->acc(sf::Vector2f(0, 0));
+        sf::Vector2f tmp_F(0, 0);
 
-        for (int j = i+1; j < bodies.size(); ++j) {
+        for (int j = i + 1; j < bodies.size(); ++j) {
             tmp_F = bodies[i]->dir(bodies[j]) *
                     bodies[i]->LJPotentialPair(bodies[j]);
 
 
-            bodies[i]->acc( bodies[i]->acc() + tmp_F );
-            bodies[j]->acc( bodies[j]->acc() - tmp_F );
+            bodies[i]->acc(bodies[i]->acc() + tmp_F);
+            bodies[j]->acc(bodies[j]->acc() - tmp_F);
         }
         //std::cout << tmp_F.x << ", " << tmp_F.y << std::endl;
         //std::cout << bodies[i]->acc().x << ", " << bodies[i]->acc().y << std::endl;
+    }
+}
+
+
+void Graphics::eventPoller(sf::Event event){
+    while(m_window.pollEvent(event)) {
+        switch (event.type) {
+
+            // Window was closed
+            case sf::Event::Closed : {
+                m_window.close();
+                break;
+            }
+
+
+            // Widow was clicked
+            case sf::Event::MouseButtonReleased : {
+                int mPosx = sf::Mouse::getPosition(m_window).x;
+                int mPosy = sf::Mouse::getPosition(m_window).y;
+
+                a2.push_back(new Follower(sf::Vector2f(mPosx,mPosy),
+                                          sf::Vector2f(0,0)));
+                break;
+            }
+
+        }
     }
 }

@@ -19,9 +19,12 @@ public:
 
     void forcesOnBodies(std::vector<Follower*> bodies);
 
+    void eventPoller(sf::Event event);
 
     sf::RenderWindow &m_window;
     sf::Clock m_clock;
+
+    std::vector<Follower*> a2;
 };
 
 
