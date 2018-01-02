@@ -56,20 +56,20 @@ void Graphics::updateBodies(std::vector<Follower*> bodies){
 
 
 void Graphics::forcesOnBodies(std::vector<Follower*> bodies) {
-    for (int i = 0; i < bodies.size() - 1; ++i) {
+    for (int i = 0; i < bodies.size(); ++i) {
         bodies[i]->acc(sf::Vector2f(0, 0));
-        sf::Vector2f tmp_F(0, 0);
+        //sf::Vector2f tmp_F(0, 0);
 
-        for (int j = i + 1; j < bodies.size(); ++j) {
-            tmp_F = bodies[i]->dir(bodies[j]) *
-                    bodies[i]->LJPotentialPair(bodies[j]);
+        for (int j = 0; j < bodies.size(); ++j) {
+            if( i!=j){
+                sf::Vector2f tmp_F = bodies[i]->dir(bodies[j]) *
+                                     bodies[i]->LJPotentialPair(bodies[j]);
 
+                bodies[i]->acc(bodies[i]->acc() + tmp_F);
+            }
 
-            bodies[i]->acc(bodies[i]->acc() + tmp_F);
-            bodies[j]->acc(bodies[j]->acc() - tmp_F);
+            //bodies[j]->acc(bodies[j]->acc() - tmp_F);
         }
-        //std::cout << tmp_F.x << ", " << tmp_F.y << std::endl;
-        //std::cout << bodies[i]->acc().x << ", " << bodies[i]->acc().y << std::endl;
     }
 }
 
